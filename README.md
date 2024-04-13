@@ -1,79 +1,45 @@
-# A-rock-paper-and-scissor-game.
-It is a simple rock paper and scissor game.
-import random
+# Rock Paper Scissors Game
 
-# Rock Paper Scissors ASCII Art
+This is a simple implementation of the classic rock-paper-scissors game in Python. It allows players to compete against the computer by choosing between rock, paper, and scissors.
 
-Rock = """
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-"""
+## How to Play
 
-Paper = """
+1. Run the Python script.
+2. When prompted, enter your choice:
+   - Enter `0` for rock
+   - Enter `1` for paper
+   - Enter `2` for scissors
+3. The computer will randomly select its choice.
+4. The result will be displayed:
+   - You win if your choice beats the computer's choice.
+   - You lose if the computer's choice beats yours.
+   - It's a draw if both choices are the same.
+
+## ASCII Art
+
+The game features ASCII art representations of rock, paper, and scissors to make the gameplay more enjoyable.
+
+## Example Gameplay
+
+```plaintext
+Please choose your option. 0 for rock, 1 for paper, 2 for scissors:
+1
+You chose 1
      _______
 ---'    ____)____
            ______)
           _______)
          _______)
 ---.__________)
-"""
-
-
-Scissors =  """
+Machine chose 0
     _______
----'   ____)____
-          ______)
-       __________)
+---'   ____)
+      (_____)
+      (_____)
       (____)
 ---.__(___)
-"""
+Machine won. 
+Better luck next time.
+```
 
-def lets_play():
-        
-my_choice = int(input("Please chose your option. 0 for rock, 1 for paper, 2 for scissor:\n"))
-
-comp_choice = random.randint(0,2)
-
-x = [Rock, Paper, Scissors]
-
-print(f"You chose {my_choice} {x[my_choice]}")
-print(f"Machine chose {comp_choice} {x[comp_choice]}")
-
-if my_choice >= 3 and my_choice < 0:
-    print("You choose an invalid choice.\n Machine Wins!")
-elif my_choice == 0 and comp_choice == 1:
-    print("You Won!")
-elif my_choice == 1 and comp_choice == 2:
-    print("Machine won. \n Better luck next time.")
-elif my_choice == 2 and comp_choice == 0:
-    print("Machine won. \n Better luck next time.")
-elif my_choice == 0 and comp_choice == 0:
-    print("It's a draw!")
-elif my_choice == 1 and comp_choice == 1:
-    print("It's a draw!")
-elif my_choice == 2 and comp_choice == 2:
-    print("It's a draw!")
-else:
-    print("Game finished!")
-    
-
-
-
-
-# y = []
-
-
-    
-    # print(x)
-    # print(comp_choise)
-    # print(my_choise)
-    
-
-
-
-    
-    
+Enjoy playing! 🎮
